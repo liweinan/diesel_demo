@@ -29,6 +29,37 @@ CREATE DATABASE
 
 Edit `.env` file and change the user name used for the postgres connection. 
 
+## Add diesel
+
+```
+$ cargo install diesel_cli --no-default-features --features postgres
+```
+
+## Run the migration
+
+```bash
+$ diesel migration run
+Running migration 2020-08-16-065644_create_posts
+```
+
+Check the created table in postgres:
+
+```bash
+$ psql foodb                                                                                                                                                                                                                    15:51:35
+psql (12.4)
+Type "help" for help.
+
+foodb=# \dt
+                  List of relations
+ Schema |            Name            | Type  | Owner 
+--------+----------------------------+-------+-------
+ public | __diesel_schema_migrations | table | weli
+ public | posts                      | table | weli
+(2 rows)
+
+foodb=# 
+```
+
 ## Write post
 
 ```bash
