@@ -17,13 +17,10 @@ $ initdb --locale=C -E UTF-8 /usr/local/var/postgres
 $ pg_ctl -D /usr/local/var/postgres start
 ```
 
-```bash
-$ psql postgres
-```
-
 ## Create Database
 
-```sql
+```bash
+$ psql postgres
 postgres=# create database foodb owner weli encoding utf8;
 CREATE DATABASE
 ```
