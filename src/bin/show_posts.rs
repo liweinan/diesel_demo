@@ -5,7 +5,7 @@ use diesel_demo::*;
 fn main() {
     use self::schema::posts::dsl::*;
 
-    let connection = establish_connection();
+    let connection = pool().get().unwrap();
     let results = posts
         .filter(published.eq(true))
         .limit(5)
