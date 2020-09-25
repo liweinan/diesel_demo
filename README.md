@@ -23,6 +23,7 @@ $ pg_ctl -D /usr/local/var/postgres start
 $ psql postgres
 postgres=# create database foodb owner weli encoding utf8;
 CREATE DATABASE
+postgres=# \q
 ```
 
 ## Setup database connection
